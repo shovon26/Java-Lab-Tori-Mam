@@ -1,0 +1,35 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication11;
+
+/**
+ *
+ * @author student
+ */
+public class AccountDriver {
+
+    public static void main(String[] args) {
+        BankAccount ob1 = new BankAccount("Shovon", 1500.50, "384");
+        BankAccount ob2 = new BankAccount("Shakib", "1971");
+
+        BankAccount acc1 = new BankAccount("Shovon", 1500, "384");
+        BankAccount acc2 = new BankAccount("Shakib", "1971");
+
+        System.out.println("Students Name : " + ob1.Accname);
+        System.out.println("Students ID : " + ob1.getID());
+        System.out.println("Total Balance : " + ob1.getbalance());
+
+        acc1.credit(5000);
+        acc1.debit(2000);
+
+        acc2.credit(2000);
+        acc2.debit(3000);
+        acc1.Transfer_to(acc2, 4000);
+
+        System.out.println("After rate of Interest money = : " + acc1.addInterest());
+
+    }
+}
